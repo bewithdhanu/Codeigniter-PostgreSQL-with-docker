@@ -30,7 +30,6 @@ class Welcome extends CI_Controller {
 			"department" => $faker->jobTitle(),
 			"email" => $faker->email(),
 		];
-		print_r($data);
         $this->db->insert("employees", $data);
 		$this->load->view('welcome_message');
 	}
