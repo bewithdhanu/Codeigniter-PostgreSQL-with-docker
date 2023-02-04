@@ -1,2 +1,4 @@
 apache/logs/*
 psql-data
+src/system/cache/*
+src/system/vendor
