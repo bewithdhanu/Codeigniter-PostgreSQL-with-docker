@@ -1,5 +1,68 @@
-<div class="markdown prose w-full break-words dark:prose-invert dark"><h1>CodeIgniter PostgreSQL with Docker</h1><p>This repository contains a sample application that demonstrates how to use the CodeIgniter PHP framework with a PostgreSQL database, all running within Docker containers.</p><h2>Requirements</h2><ul><li>Docker</li><li>Docker Compose</li></ul><h2>Installation</h2><ol><li>Clone the repository to your local machine:</li></ol><pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span><button class="flex ml-auto gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-bash">git <span class="hljs-built_in">clone</span> https://github.com/bewithdhanu/Codeigniter-PostgreSQL-with-docker.git
-</code></div></div></pre><ol start="2"><li>Navigate to the project directory:</li></ol><pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>python</span><button class="flex ml-auto gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-python">cd Codeigniter-PostgreSQL-<span class="hljs-keyword">with</span>-docker
-</code></div></div></pre><ol start="3"><li>Build and start the Docker containers:</li></ol><pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><button class="flex ml-auto gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs">docker-compose up -d
-</code></div></div></pre><ol start="4"><li>Install the required dependencies using Composer:</li></ol><pre><div class="bg-black rounded-md mb-4"><div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans justify-between rounded-t-md"><span>bash</span><button class="flex ml-auto gap-2"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>Copy code</button></div><div class="p-4 overflow-y-auto"><code class="!whitespace-pre hljs language-bash">docker-compose run --<span class="hljs-built_in">rm</span> php composer install
-</code></div></div></pre><ol start="5"><li>Visit the application in your web browser at <code>http://localhost:8080</code>.</li></ol><h2>Configuration</h2><p>The application is configured to use the following environment variables:</p><ul><li><code>DB_HOST</code>: The hostname of the PostgreSQL server.</li><li><code>DB_PORT</code>: The port number of the PostgreSQL server.</li><li><code>DB_NAME</code>: The name of the PostgreSQL database.</li><li><code>DB_USER</code>: The username to use when connecting to the PostgreSQL database.</li><li><code>DB_PASS</code>: The password to use when connecting to the PostgreSQL database.</li></ul><p>These environment variables can be set in the <code>docker-compose.yml</code> file.</p><h2>License</h2><p>This repository is licensed under the MIT License. See the <a href="LICENSE" target="_new">LICENSE</a> file for more information.</p><h2>Credits</h2><p>This repository was created by <a href="https://github.com/bewithdhanu" target="_new">Dhanu K</a>.</p><h3>References</h3><ul><li><a href="https://codeigniter.com/user_guide/" target="_new">CodeIgniter User Guide</a></li><li><a href="https://www.postgresql.org/" target="_new">PostgreSQL</a></li><li><a href="https://docs.docker.com/" target="_new">Docker Documentation</a></li><li><a href="https://docs.docker.com/compose/" target="_new">Docker Compose Documentation</a></li></ul><h2>Conclusion</h2><p>This is a basic example of how to use CodeIgniter with PostgreSQL and Docker. Feel free to use this as a starting point for your own applications!</p></div>
+
+# CodeIgniter PostgreSQL with Docker
+
+This repository contains a sample application that demonstrates how to use the CodeIgniter PHP framework with a PostgreSQL database, all running within Docker containers.
+
+## Requirements
+
+-   Docker
+-   Docker Compose
+
+## Installation
+
+1.  Clone the repository to your local machine:
+
+bashCopy code
+
+`git clone https://github.com/bewithdhanu/Codeigniter-PostgreSQL-with-docker.git` 
+
+2.  Navigate to the project directory:
+
+pythonCopy code
+
+`cd Codeigniter-PostgreSQL-with-docker` 
+
+3.  Build and start the Docker containers:
+
+Copy code
+
+`docker-compose up -d` 
+
+4.  Install the required dependencies using Composer:
+
+bashCopy code
+
+`docker-compose run --rm php composer install` 
+
+5.  Visit the application in your web browser at `http://localhost:8080`.
+
+## Configuration
+
+The application is configured to use the following environment variables:
+
+-   `DB_HOST`: The hostname of the PostgreSQL server.
+-   `DB_PORT`: The port number of the PostgreSQL server.
+-   `DB_NAME`: The name of the PostgreSQL database.
+-   `DB_USER`: The username to use when connecting to the PostgreSQL database.
+-   `DB_PASS`: The password to use when connecting to the PostgreSQL database.
+
+These environment variables can be set in the `docker-compose.yml` file.
+
+## License
+
+This repository is licensed under the MIT License. See the [LICENSE](https://chat.openai.com/chat/LICENSE) file for more information.
+
+## Credits
+
+This repository was created by [Dhanu K](https://github.com/bewithdhanu).
+
+### References
+
+-   [CodeIgniter User Guide](https://codeigniter.com/user_guide/)
+-   [PostgreSQL](https://www.postgresql.org/)
+-   [Docker Documentation](https://docs.docker.com/)
+-   [Docker Compose Documentation](https://docs.docker.com/compose/)
+
+## Conclusion
+
+This is a basic example of how to use CodeIgniter with PostgreSQL and Docker. Feel free to use this as a starting point for your own applications!
