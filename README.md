@@ -12,25 +12,17 @@ This repository contains a sample application that demonstrates how to use the C
 
 1.  Clone the repository to your local machine:
 
-bashCopy code
-
 `git clone https://github.com/bewithdhanu/Codeigniter-PostgreSQL-with-docker.git` 
 
 2.  Navigate to the project directory:
-
-pythonCopy code
 
 `cd Codeigniter-PostgreSQL-with-docker` 
 
 3.  Build and start the Docker containers:
 
-Copy code
-
 `docker-compose up -d` 
 
 4.  Install the required dependencies using Composer:
-
-bashCopy code
 
 `docker-compose run --rm php composer install` 
 
